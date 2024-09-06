@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@media</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="bulb"><img src="bulb.png" height="400" width="700"> </div>
+        <pre>        HTML adaptativo.
+            Erick Daniel Galaviz Saenz
+       Mat.238545
+        ClassList </pre>
+        
+            
+            
+            
+       
+    </header>
+
+
+    <nav id="myMainNav" class="main-nav">
+       
+        <a href="https://erickisunique.github.io/responsive/Parcial_1_Bitacora/Javascript/">Javascript</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_1_Bitacora/Queries/">Queries</a>
+        <a href="https://erickisunique.github.io/responsive/">Landing page</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_1_Bitacora/Viewport/">Viewport</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_1_Bitacora/Events/">Eventos</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_1_Bitacora/Classlist/">Classlist</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_1_Bitacora/Propiedad Style/">Propiedad style</a>
+        <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        <!-- <button class="icon" class="burger"><i class="fa fa-bars"></i></button> -->
+    </nav>
+
+
+    <main>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/@media.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>@media</h2>
+                    <p>
+                        <li>Las Media queries le permiten aplicar estilos CSS según el tipo general de un dispositivo
+                            (como impresión o pantalla) u otras características como la resolución de la pantalla o el
+                            ancho del viewport del navegador. </li>
+
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/@mediamaxwidth.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>@media(max-width:1250px)</h2>
+                    <p>
+                        <li>Muchas características de medios son características de rango, lo que significa que pueden
+                            tener el prefijo "min-" o "max-" para expresar restricciones de "condición mínima" o
+                            "condición máxima". Por ejemplo, este CSS aplicará estilos solo si el ancho del viewport de
+                            su navegador es igual o menor que 1250px:</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>
