@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queries</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <p>
+            HTML adaptativo.
+            Erick Daniel Galaviz Saenz
+            Mat.238545
+            Queries
+        </p>
+    </header>
+
+
+    <nav id="myMainNav" class="main-nav">
+        <a href="">Javascript</a>
+        
+        <a href="">@media</a>
+        <a href="">Viewport</a>
+        <a href="">Eventos</a>
+        <a href="">Classlist</a>
+        <a href="">Propiedad style</a>
+        <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        <!-- <button class="icon" class="burger"><i class="fa fa-bars"></i></button> -->
+    </nav>
+
+
+    <main>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/querySelectors.png" alt="" width="800" >
+                </div>
+                <div class="texto">
+                    <h2>QuerieSelector()</h2>
+                    <p>
+                        <li>Devuelve el primer elemento del documento (utilizando un recorrido primero en profundidad
+                            pre ordenado de los nodos del documento) que coincida con el grupo especificado de
+                            selectores.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/querySelectorsAll.png" alt="" width="800">
+                </div>
+                <div class="texto">
+                    <h2>QuerieSelectorAll()</h2>
+                    <p>
+                        <li>El método querySelectorAll() de un Element devuelve una NodeList estática (no viva) que
+                            representa una lista de elementos del documento que coinciden con el grupo de selectores
+                            indicados.</li>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>
