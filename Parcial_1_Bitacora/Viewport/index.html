@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="bulb"><img src="bulb.png" height="400" width="700"> </div>
+       <p>
+        HTML adaptativo.
+        Erick Daniel Galaviz Saenz
+        Mat.238545
+        Bitacora parcial 1. 
+       </p>
+    </header>
+
+    
+    <nav id="myMainNav" class="main-nav">
+        <a href="">Javascript</a>
+        <a href="">Queries</a>
+        <a href="">@media</a>
+        
+        <a href="">Eventos</a>
+        <a href="">Classlist</a>
+        <a href="">Propiedad style</a>
+        <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        <!-- <button class="icon" class="burger"><i class="fa fa-bars"></i></button> --> 
+    </nav>
+
+
+    <main>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/viewport.png" alt=""  >
+                </div>
+                <div class="texto">
+                    <h2>Viewport</h2>
+                    <p>
+                        <li>El viewport es el area visible para el usuario de una pagina web.</li> 
+                        <li>Varia con el dispositivo en el que se visualize la pagina web.</li>
+                        <li>Surgio como una manera de arreglar las paginas web, previamente adaptadas unicamente para pc</li>
+                        <li>La imagen es un ejemplo de una pagina sin el meta tag viewport</li>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/functions.png" alt="">
+                </div>
+                <div class="texto">
+                    <h2>width=device-width</h2>
+                    <p>
+                        <li>Insertado dentro del meta tag, permite el ancho de la pagina a variar dependiendo de el dispositivo en el cual se visualize.</li>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/getElement.png" alt="">
+                </div>
+                <div class="texto">
+                    <h2>initial-scale=1.0</h2>
+                    <p>
+                        <li>Inicializa el nivel inicial de zoom cuando la pagina es cargada por primera ves.</li>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+   
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+    
+
+</body>
+
+
+
+</html>

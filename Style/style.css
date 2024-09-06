@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    font-style: normal;
+   
+    /*border: red 2px solid;*/ 
+}
+
+header{
+    width:100%;
+    height:290px;
+    background-color: rgb(184, 173, 150);
+    margin: 0 auto;
+    text-align: center;
+    display:flex;
+}
+header p{
+    color:rgb(4, 12, 19);
+    width:20%;
+    font-size: 70px;
+    margin-left:20%;
+    margin-top:2%;
+}
+#bulb{
+    width:20%;
+}
+main{
+    background-color: rgb(192, 192, 192);
+    width:100%;
+    height: 1500px; 
+}
+#boxL{
+    background-color: rgb(46, 66, 46);
+    float:left;
+    width: 40%;
+    height: 500px;
+    border-radius: 50px;
+    margin-top:5%;
+    margin-left:5%;
+    padding:2%;
+    color:antiquewhite;
+    box-shadow: rgba(11, 41, 9, 0.4) 5px 5px, rgba(11, 41, 9, 0.4) 10px 10px,rgba(11, 41, 9, 0.4) 15px 15px,rgba(11, 41, 9, 0.4) 20px 20px,rgba(11, 41, 9, 0.4) 25px 25px;
+}
+#boxR{
+    background-color: rgb(46, 66, 46);
+    float:right;
+    width: 40%;
+    height: 500px;
+    border-radius: 50px;
+    margin-top:5%;
+    margin-right:5%;
+    padding:2%;
+    color:antiquewhite;
+    box-shadow: rgba(11, 41, 9, 0.4) 5px 5px, rgba(11, 41, 9, 0.4) 10px 10px,rgba(11, 41, 9, 0.4) 15px 15px,rgba(11, 41, 9, 0.4) 20px 20px,rgba(11, 41, 9, 0.4) 25px 25px;
+}
+.text a{
+    text-decoration: none;
+    color:antiquewhite;
+}
+.text a:hover{
+    transition: 1s;
+    color:black;
+    background-color: antiquewhite;
+    font-size: 60px;
+}
