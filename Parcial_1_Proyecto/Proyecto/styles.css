@@ -387,31 +387,16 @@ footer p:nth-child(1){
 }
 
                         @media screen and (max-width: 480px){
+    .main-nav.responsive a {
+
+        width: 35%;
+        
+    }
     
     #title p{
         font-size:15px;
     }
-    .main-nav .icon{
-        display:block;
-        color:aliceblue;
-        margin-left:60%;
-        width:20%;
-    }
-    .main-nav.responsive .icon{
-        position:absolute;
-        left:0;
-        
-    }
-    .main-nav.responsive a {
-        display:block;
-        text-align: left; 
-        padding: 10px; 
-        width: 30%;
-        margin-left: 12%;
-        background-color:rgb(187, 95, 187);
-        color:rgb(255, 255, 255);
-        text-decoration: none;
-    }
+
     #imageOne{
         margin-top: 70%;
     }
