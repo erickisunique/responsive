@@ -86,8 +86,12 @@
     </main>
     <footer>
         
+        
+        <p><a href="#">DOWNLOAD NOW</a> </p>
+        <p>Available for Steam and PC</p>
+        <p><img src="Images/M.png" height="70px" width="50px"></p>
+        <p>Sensitive content</p>
         <p>Bizarro ® </p>
-        <p>DOWNLOAD NOW</p>
         <p>Email: 
             bizarro_official@gmail.com</p>
     </footer>
@@ -126,20 +130,20 @@
         let aRScrollTimeout; // Variable to store the timeout ID
         
         function updateVariables() {
-            
-            const isPc = window.matchMedia("(max-width: 2000px)").matches;
+            const isBigPc = window.matchMedia("(max-width: 2700px)").matches;
+            const isPc = window.matchMedia("(max-width: 1200px)").matches;
             const isTablet = window.matchMedia("(max-width: 768px)").matches;
             const isMobile = window.matchMedia("(max-width: 480px)").matches;
             
             if (isMobile) {
-                t_1_SpawnY = 1000; t_1_MaxDistance = 200;
-                t_2_SpawnY = 1100; t_2_MaxDistance = 100;
+                t_1_SpawnY = 800; t_1_MaxDistance = 200;
+                t_2_SpawnY = 900; t_2_MaxDistance = 100;
                 tbox_2.style.marginTop ="45%";
                 //
-                t_3_SpawnY = 1800; t_3_MaxDistance = 300;
-                t_4_SpawnY = 1900; t_4_MaxDistance = 180;
+                t_3_SpawnY = 1600; t_3_MaxDistance = 300;
+                t_4_SpawnY = 1700; t_4_MaxDistance = 180;
                 tbox_4.style.marginTop ="35%";
-                t_5_SpawnY = 2000; t_5_MaxDistance = 50;
+                t_5_SpawnY = 1800; t_5_MaxDistance = 50;
                 tbox_5.style.marginTop ="70%";
                 //
                 t_6_SpawnY = 2400; t_6_MaxDistance = 200;
@@ -175,6 +179,25 @@
 
             } else if (isPc) {
                 t_1_SpawnY = 1150; t_1_MaxDistance = 400;
+                t_2_SpawnY = 1400; t_2_MaxDistance = 400;
+                //
+                t_3_SpawnY = 1800; t_3_MaxDistance = 500;
+                t_4_SpawnY = 2000; t_4_MaxDistance = 400;
+                t_5_SpawnY = 2200; t_5_MaxDistance = 200;
+                
+                //
+                t_6_SpawnY = 2950; t_6_MaxDistance = 300;
+                t_7_SpawnY = 2750; t_7_MaxDistance = 400;
+                //
+                ariel_translateDistance = 800; 
+                ariel_SpawnY=2100; 
+                camus_translateDistance = 800; 
+                camus_SpawnY=2200; 
+                arielReal_translateDistance = 0; 
+                arielReal_SpawnY=0; 
+
+            } else if (isBigPc) {
+                t_1_SpawnY = 1150; t_1_MaxDistance = 400;
                 t_2_SpawnY = 1600; t_2_MaxDistance = 400;
                 //
                 t_3_SpawnY = 2000; t_3_MaxDistance = 500;
@@ -184,9 +207,11 @@
                 t_6_SpawnY = 3250; t_6_MaxDistance = 300;
                 t_7_SpawnY = 3050; t_7_MaxDistance = 400;
                 //
-                ariel_translateDistance = 800; 
+                ariel_sprite.style.marginTop = "20%";
+                ariel_translateDistance = 11000; 
                 ariel_SpawnY=2200; 
-                camus_translateDistance = 800; 
+                camus_sprite.style.marginTop = "30%";
+                camus_translateDistance = 1150; 
                 camus_SpawnY=2200; 
                 arielReal_translateDistance = 0; 
                 arielReal_SpawnY=0; 
