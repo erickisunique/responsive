@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizarro web page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    
+    <header>
+        <nav id="myMainNav" class="main-nav">
+            <a href="">PLAY</a>
+            <a href="">TRAILER</a>
+            <a href="">DONATE</a>
+            <a href="">X</a>
+            <a href="">IG</a>
+            <a href="">FACEBOOK</a>
+            <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        </nav>
+    </header>
+   
+    <main>
+       
+        <img src="Images/Bizarro_improved0.png" id="logo">
+        <div id="title"> <p>A storydriven rythm game. By -egmm</p> </div>
+        
+       <!--- <div class="sticky" style="top:0px;"> --->
+            <div id="scene"> 
+                <div id="imageOne"></div>
+                <div class="wave1"></div>
+                <div class="wave2"></div>
+                <div class="wave3"></div>
+                   
+                    <!---<div><img src="Images/ariel.png" id="imageOne" ></div> --->
+            </div>
+            
+            <div id="scene2">
+                <div id="tbox1">
+                    <p>A strange journey</p>  
+                </div>
+                <div id="tbox2">
+                    <p>A strange world</p>
+                </div>
+                    <img src="Images/outskirts_intro_10.png" id="imageTwo">
+            </div>
+
+            <div id="scene3">
+                <div id="ariel_sprite"></div>
+                <div id="camus_sprite"></div>
+                <div id="tbox3">
+                    <p>Take a dive</p> 
+                </div>
+                <div id="tbox4">
+                    <p>Into a rythm rpg</p> 
+                </div>
+                <div id="tbox5">
+                    <p>With deep lore</p> 
+                </div>
+                <img src="Images/outskirts.png" id="imageThree" >
+            </div>
+
+            <div id="scene4">
+                <div id="tbox6">
+                    <p>Make them happy</p>
+                </div>
+                <div id="tbox7">
+                    
+                    <p>Meet new friends!</p>  
+                </div>
+                    <img src="Images/3_bosses.gif" id="imageFour">
+            </div>
+            
+            <div id="scene5">
+                <img src="Images/prologue.png" id="imageFive" height="800">
+            </div>
+            
+    </main>
+    <footer>
+        
+        
+        <p><a href="#">DOWNLOAD NOW</a> </p>
+        <p>Available for Steam and PC</p>
+        <p><img src="Images/M.png" height="70px" width="50px"></p>
+        <p>Sensitive content</p>
+        <p>Bizarro ® </p>
+        <p>Email: 
+            bizarro_official@gmail.com</p>
+    </footer>
+
+   
+    <script>
+        const imageOne = document.getElementById('imageOne');
+        const translateDistance = 1200; // Max translation dist
+        const spawnY = 100; // Min dist to spawn
+        const finalOpacity=.85;
+       
+        ///
+        let tbox_1 = document.getElementById('tbox1');
+        let tbox_2 = document.getElementById('tbox2');
+        let tbox_3 = document.getElementById('tbox3');
+        let tbox_4 = document.getElementById('tbox4');
+        let tbox_5 = document.getElementById('tbox5');
+        let tbox_6 = document.getElementById('tbox6');
+        let tbox_7 = document.getElementById('tbox7');
+        let ariel_sprite = document.getElementById('ariel_sprite');
+        let camus_sprite = document.getElementById('camus_sprite');
+        let arielReal_sprite = document.getElementById('arielReal_sprite');
+        //
+        let t_1_SpawnY, t_1_MaxDistance;
+        let t_2_SpawnY, t_2_MaxDistance;
+        let t_3_SpawnY, t_3_MaxDistance;
+        let t_4_SpawnY, t_4_MaxDistance;
+        let t_5_SpawnY, t_5_MaxDistance;
+        let t_6_SpawnY, t_6_MaxDistance;
+        let t_7_SpawnY, t_7_MaxDistance;
+        let ariel_SpawnY, ariel_translateDistance; 
+        let camus_SpawnY, camus_translateDistance; 
+        let arielReal_SpawnY, arielReal_translateDistance; 
+        let aScrollTimeout; // Variable to store the timeout ID
+        let cScrollTimeout; // Variable to store the timeout ID
+        let aRScrollTimeout; // Variable to store the timeout ID
+        
+        function updateVariables() {
+            const isBigPc = window.matchMedia("(max-width: 2700px)").matches;
+            const isPc = window.matchMedia("(max-width: 1200px)").matches;
+            const isTablet = window.matchMedia("(max-width: 768px)").matches;
+            const isMobile = window.matchMedia("(max-width: 480px)").matches;
+            
+            if (isMobile) {
+                t_1_SpawnY = 800; t_1_MaxDistance = 200;
+                t_2_SpawnY = 1200; t_2_MaxDistance = 100;
+                tbox_2.style.marginTop ="85%";
+                //
+                t_3_SpawnY = 1600; t_3_MaxDistance = 200;
+                t_4_SpawnY = 1700; t_4_MaxDistance = 170;
+                tbox_4.style.marginTop ="35%";
+                t_5_SpawnY = 1800; t_5_MaxDistance = 10;
+                tbox_5.style.marginTop ="70%";
+                //
+                t_6_SpawnY = 2400; t_6_MaxDistance = 200;
+                t_7_SpawnY = 2300; t_7_MaxDistance = 200;
+                tbox_6.style.marginTop ="70%";
+                //
+                ariel_translateDistance = 800; 
+                ariel_SpawnY=1700; 
+                camus_translateDistance = 800; 
+                camus_SpawnY=1750; 
+                arielReal_translateDistance = 0; 
+                arielReal_SpawnY=0; 
+
+            } else if (isTablet) {
+                t_1_SpawnY = 1100; t_1_MaxDistance = 200;
+                t_2_SpawnY = 1200; t_2_MaxDistance = 300;
+                //
+                t_3_SpawnY = 1800; t_3_MaxDistance = 500;
+                t_4_SpawnY = 1900; t_4_MaxDistance = 300;
+                t_5_SpawnY = 2000; t_5_MaxDistance = 100;
+                //
+                t_6_SpawnY = 2500; t_6_MaxDistance = 300;
+                tbox_6.style.marginTop ="30%";
+                tbox_7.style.marginTop ="5%";
+                t_7_SpawnY = 2400; t_7_MaxDistance = 400;
+                //
+                ariel_translateDistance = 800; 
+                ariel_SpawnY=2000; 
+                camus_translateDistance = 800; 
+                camus_SpawnY=2000; 
+                arielReal_translateDistance = 0; 
+                arielReal_SpawnY=0; 
+
+            } else if (isPc) {
+                t_1_SpawnY = 1150; t_1_MaxDistance = 400;
+                t_2_SpawnY = 1400; t_2_MaxDistance = 400;
+                //
+                t_3_SpawnY = 1800; t_3_MaxDistance = 500;
+                t_4_SpawnY = 2000; t_4_MaxDistance = 400;
+                t_5_SpawnY = 2200; t_5_MaxDistance = 200;
+                
+                //
+                t_6_SpawnY = 2950; t_6_MaxDistance = 300;
+                t_7_SpawnY = 2750; t_7_MaxDistance = 400;
+                //
+                ariel_sprite.style.marginTop = "30%";
+                ariel_translateDistance = 800; 
+                ariel_SpawnY=2100; 
+                camus_sprite.style.marginTop = "40%";
+                camus_translateDistance = 800; 
+                camus_SpawnY=2200; 
+                arielReal_translateDistance = 0; 
+                arielReal_SpawnY=0; 
+
+            } else if (isBigPc) {
+                t_1_SpawnY = 1150; t_1_MaxDistance = 400;
+                t_2_SpawnY = 1600; t_2_MaxDistance = 400;
+                //
+                t_3_SpawnY = 2000; t_3_MaxDistance = 500;
+                t_4_SpawnY = 2200; t_4_MaxDistance = 400;
+                t_5_SpawnY = 2400; t_5_MaxDistance = 300;
+                //
+                t_6_SpawnY = 3250; t_6_MaxDistance = 300;
+                t_7_SpawnY = 3050; t_7_MaxDistance = 400;
+                //
+                ariel_sprite.style.marginTop = "20%";
+                ariel_translateDistance = 11000; 
+                ariel_SpawnY=2200; 
+                camus_sprite.style.marginTop = "30%";
+                camus_translateDistance = 1150; 
+                camus_SpawnY=2200; 
+                arielReal_translateDistance = 0; 
+                arielReal_SpawnY=0; 
+
+            }
+        }
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+        
+
+window.addEventListener('scroll', () => {
+    // Get the current scroll position
+    const scrollY = window.scrollY;
+    const translateY = Math.min(scrollY, translateDistance);
+    
+    // ARIEL FALLING
+    imageOne.style.transform = `translateY(${translateY}px)`;
+    imageOne.style.opacity = Math.min(scrollY / 1000, 1); // Adjust opacity based on scroll
+
+    // ARIEL WALKING 
+    if (scrollY > ariel_SpawnY) {
+        const ariel_translateX = Math.min(scrollY - ariel_SpawnY, ariel_translateDistance);
+        ariel_sprite.style.transform = `translateX(${ariel_translateX}px)`;
+        ariel_sprite.style.opacity = Math.min(scrollY / 1000, 1); // Adjust opacity based on scroll
+        // Add animation class
+        ariel_sprite.classList.add('animate-ariel');
+        
+        /////////////////TIMEOUT CODE REMOVE LATER///////////////////////////////////////
+        // Clear any existing timeout
+        if (aScrollTimeout) {
+            clearTimeout(aScrollTimeout);
+        }
+        // Set a timeout to remove the animation class if no scroll occurs for 1 second
+        aScrollTimeout = setTimeout(() => {
+            ariel_sprite.classList.remove('animate-ariel');
+        }, 700); // 1000 ms = 1 second
+        /////////////////TIMEOUT CODE REMOVE LATER///////////////////////////////////////
+
+        } else {
+            ariel_sprite.style.transform = `translateX(0px)`;
+            ariel_sprite.style.opacity = 0; // Adjust opacity based on scroll
+            // Remove animation class immediately
+            ariel_sprite.classList.remove('animate-ariel');
+    }
+    // CAMUS WALKING 
+    if (scrollY > camus_SpawnY) {
+        const camus_translateX = Math.min(scrollY - camus_SpawnY, camus_translateDistance);
+        camus_sprite.style.transform = `translateX(${camus_translateX}px)`;
+        camus_sprite.style.opacity = Math.min(scrollY / 1000, 1); // Adjust opacity based on scroll
+        // Add animation class
+        camus_sprite.classList.add('animate-camus');
+        
+        /////////////////TIMEOUT CODE REMOVE LATER///////////////////////////////////////
+        // Clear any existing timeout
+        if (cScrollTimeout) {
+            clearTimeout(cScrollTimeout);
+        }
+        // Set a timeout to remove the animation class if no scroll occurs for 1 second
+        cScrollTimeout = setTimeout(() => {
+            camus_sprite.classList.remove('animate-camus');
+        }, 700); // 1000 ms = 1 second
+        /////////////////TIMEOUT CODE REMOVE LATER///////////////////////////////////////
+
+        } else {
+            camus_sprite.style.transform = `translateX(0px)`;
+            camus_sprite.style.opacity = 0; // Adjust opacity based on scroll
+            // Remove animation class immediately
+            camus_sprite.classList.remove('animate-camus');
+    }
+ 
+            
+    ///////////////// TBOX 1 //////////////////////////////////////////////////////////////////////////////////////////
+    if (scrollY > t_1_SpawnY) {
+        const t_1_TranslateX = Math.min(scrollY - t_1_SpawnY, t_1_MaxDistance);
+        //translate to the LEFT
+        tbox_1.style.transform = `translateX(${t_1_TranslateX}px)`;
+        tbox_1.style.opacity = Math.min((scrollY - t_1_SpawnY) / 500, finalOpacity); // Adjust opacity based on scroll
+    } else {
+        tbox_1.style.transform = `translateX(0px)`;
+        tbox_1.style.opacity = 0; // Hide tbox1 if not scrolled past tSpawnY
+    }
+
+    // TBOX 2
+    if (scrollY > t_2_SpawnY) {
+        const t_2_TranslateX = Math.min(scrollY - t_2_SpawnY, t_2_MaxDistance);
+        //translate to the RIGHT
+        tbox_2.style.transform = `translateX(${-t_2_TranslateX}px)`;
+        tbox_2.style.opacity = Math.min((scrollY - t_2_SpawnY) / 500, finalOpacity); // Adjust opacity based on scroll
+    } else {
+        tbox_2.style.transform = `translateX(0px)`;
+        tbox_2.style.opacity = 0; // Hide tbox1 if not scrolled past tSpawnY
+    }
+    
+    // TBOX 3
+    if (scrollY > t_3_SpawnY) {
+        const t_3_TranslateX = Math.min(scrollY - t_3_SpawnY, t_3_MaxDistance);
+        //translate to the RIGHT
+        tbox_3.style.transform = `translateX(${-t_3_TranslateX}px)`;
+        tbox_3.style.opacity = Math.min((scrollY - t_3_SpawnY) / 500, finalOpacity); // Adjust opacity based on scroll
+    } else {
+        tbox_3.style.transform = `translateX(0px)`;
+        tbox_3.style.opacity = 0; // Hide tbox1 if not scrolled past tSpawnY
+    }
+
+    // TBOX 4
+    if (scrollY > t_4_SpawnY) {
+        const t_4_TranslateX = Math.min(scrollY - t_4_SpawnY, t_4_MaxDistance);
+        //translate to the RIGHT
+        tbox_4.style.transform = `translateX(${t_4_TranslateX}px)`;
+        tbox_4.style.opacity = Math.min((scrollY - t_4_SpawnY) / 500, finalOpacity); // Adjust opacity based on scroll
+    } else {
+        tbox_4.style.transform = `translateX(0px)`;
+        tbox_4.style.opacity = 0; // Hide tbox1 if not scrolled past tSpawnY
+    }
+
+    // TBOX 5
+    if (scrollY > t_5_SpawnY) {
+        const t_5_TranslateX = Math.min(scrollY - t_5_SpawnY, t_5_MaxDistance);
+        //translate to the RIGHT
+        tbox_5.style.transform = `translateX(${-t_5_TranslateX}px)`;
+        tbox_5.style.opacity = Math.min((scrollY - t_5_SpawnY) / 500, finalOpacity); // Adjust opacity based on scroll
+    } else {
+        tbox_5.style.transform = `translateX(0px)`;
+        tbox_5.style.opacity = 0; // Hide tbox1 if not scrolled past tSpawnY
+    }
+
+    // TBOX 6
+    if (scrollY > t_6_SpawnY) {
+        const t_6_TranslateX = Math.min(scrollY - t_6_SpawnY, t_6_MaxDistance);
+        //translate to the RIGHT
+        tbox_6.style.transform = `translateX(${t_6_TranslateX}px)`;
+        tbox_6.style.opacity = Math.min((scrollY - t_6_SpawnY) / 500, finalOpacity); // Adjust opacity based on scroll
+    } else {
+        tbox_6.style.transform = `translateX(0px)`;
+        tbox_6.style.opacity = 0; // Hide tbox1 if not scrolled past tSpawnY
+    }
+
+    // TBOX 7
+    if (scrollY > t_7_SpawnY) {
+        const t_7_TranslateX = Math.min(scrollY - t_7_SpawnY, t_7_MaxDistance);
+        //translate to the RIGHT
+        tbox_7.style.transform = `translateX(${-t_7_TranslateX}px)`;
+        tbox_7.style.opacity = Math.min((scrollY - t_7_SpawnY) / 500, finalOpacity); // Adjust opacity based on scroll
+    } else {
+        tbox_7.style.transform = `translateX(0px)`;
+        tbox_7.style.opacity = 0; // Hide tbox1 if not scrolled past tSpawnY
+    }
+});
+       
+        window.addEventListener('resize', updateVariables);
+        // Initial call to set variables on page load
+        updateVariables();
+    </script>
+
+  
+</body>
+</html>

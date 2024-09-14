@@ -1,0 +1,449 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-style: normal;
+    
+    background-color: rgb(0, 0, 0);
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+header{
+    height:200px; 
+    width:100%;
+    
+}
+nav{
+    z-index: 1;
+    top:0%;
+    font-family: "Pixelify Sans", sans-serif;
+    height:50px; 
+    width:100%;
+    justify-content:space-between;
+    display:flex;
+    position:fixed;
+}
+nav .icon{
+    display:none;
+}
+nav a:first-child{
+    background-color:rgb(187, 95, 187);
+    color:rgb(255, 255, 255);
+}
+nav a{
+   margin-left:50px;
+   text-decoration: none;
+   color:antiquewhite;
+   width: 20%;
+   text-align: center;
+}
+
+main{
+    width:100%;
+    height:5400px;
+    
+}
+
+#logo{
+    margin-top:10%;
+    margin-left:35%;
+}
+#title{
+    color:aliceblue;
+    text-align: center;
+}
+#scene{
+    
+    margin-top:10%;
+    width:100%;
+    height:1200px;
+    overflow: hidden;
+}
+#scene2 {
+    width:100%;
+    height:900px;
+    overflow: hidden;
+}
+#scene3{
+    width:100%;
+    height:900px;
+    overflow: hidden;
+}
+#scene4{
+    width:100%;
+    height:1200px;
+    overflow: hidden;
+}
+#scene5{
+    width:100%;
+    height:1000px;
+    overflow: hidden;
+}
+#ariel_sprite{
+    position:absolute;
+    margin-top:30%;
+    margin-left:20%;
+    opacity: 0;
+    width:64px;
+    max-width: 600px;
+    height:160px;
+    background: transparent
+    url('Images/ariel_walk.png') 0 0 no-repeat;
+} 
+.animate-ariel {
+    animation: animate_ariel 1s steps(4) infinite;
+}
+@keyframes animate_ariel {
+    from {background-position: 0 0;}
+    to {background-position: -256px 0;}
+}
+#camus_sprite{
+    position:absolute;
+    margin-top:40%;
+    margin-left:40%;
+    opacity: 0;
+    width:45px;
+    max-width: 600px;
+    height:160px;
+    background: transparent
+    url('Images/camus_walk.png') 0 0 no-repeat;
+} 
+.animate-camus {
+    animation: animate_camus 1s steps(4) infinite;
+}
+@keyframes animate_camus {
+    from {background-position: 0 0;}
+    to {background-position: -160px 0;}
+}
+
+
+#tbox1{
+    left:0%;
+    margin-top:10%;
+    width:20%;
+    height:100px;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0);
+    color:aliceblue;
+    text-align: center;
+    padding:1%;
+}
+#tbox1 p, #tbox2 p, #tbox3 p, #tbox4 p, #tbox5 p{
+    background-color: rgba(0, 0, 0, 0);
+}
+#tbox2{
+    right:0%;
+    margin-top:35%;
+    width:20%;
+    height:100px;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0);
+    color:aliceblue;
+    text-align: center;
+    padding:1%;
+}
+
+#tbox3{
+    right:0%;
+    margin-top:5%;
+    width:20%;
+    height:100px;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0);
+    color:aliceblue;
+    text-align: center;
+    padding:1%;
+}
+
+#tbox4{
+    left:0%;
+    margin-top:20%;
+    width:20%;
+    height:100px;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0);
+    color:aliceblue;
+    text-align: center;
+    padding:1%;
+}
+
+#tbox5{
+    right:0%;
+    margin-top:30%;
+    width:20%;
+    height:100px;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0);
+    color:aliceblue;
+    text-align: center;
+    padding:1%;
+}
+#tbox6{
+    left:0%;
+    margin-top:25%;
+    width:20%;
+    height:100px;
+    position:absolute;
+    background-color: rgba(101, 60, 60, 0);
+    color:aliceblue;
+    text-align: center;
+    padding:1%;
+}
+#tbox7{
+    right:0%;
+    margin-top:15%;
+    width:20%;
+    height:100px;
+    position:absolute;
+    background-color: rgba(101, 53, 53, 0);
+    color:aliceblue;
+    text-align: center;
+    padding:1%;
+}
+.wave1{
+    width:100%;
+    height:400px;
+    background: url('Images/fog.png') ;
+    animation: wavesL 10s steps(1000) infinite;
+}
+
+.wave2{
+    width:100%;
+    height:400px;
+    background: url('Images/fog.png') ;
+    animation: wavesR 10s steps(1000) infinite;
+}
+@keyframes wavesR{
+    100%{
+        background-position: 1000px,0;
+    }
+}
+.wave3{
+    width:100%;
+    height:400px;
+    background: url('Images/fog.png') ;
+    animation: wavesL 10s steps(1000) infinite;
+}
+@keyframes wavesL{
+    100%{
+        background-position: -1000px;
+    }
+}
+#imageOne{
+    position:absolute;
+    margin-top:30%;
+    top:0%;
+    max-width: 600px;
+    margin-left:40%;
+    opacity: 0;
+    width:128px;
+    height:160px;
+    animation: ariel 1s steps(2) infinite;
+    transform: translate(-5%, 0);
+   background: transparent
+   url('Images/ariel_web.png') 0 0 no-repeat;
+} 
+   @keyframes ariel{
+    from {background-position: 0 0;}
+    to {background-position: -256px 0;}
+   }
+
+#imageTwo{    
+    
+    width:100%;
+    height:900px;
+}
+#imageThree{ 
+    width:100%;
+    height:900px;
+}
+#imageFour{ 
+    width:100%;
+    height:1200px;
+}
+#imageFive{ 
+    width:100%;
+    height:1000px;
+}
+footer{
+    width:100%;
+    
+    background-color: rgb(65, 66, 43);
+    
+    color:aliceblue;
+    
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    
+}
+footer p{
+    margin-top:1%;
+    
+    background-color: rgba(65, 66, 43, 0.384);
+}
+footer a{
+    text-decoration:none;
+    color:rgb(246, 252, 69);
+    background-color: rgba(65, 66, 43, 0.384);
+}
+footer p:nth-child(1){
+    color:rgb(246, 252, 69);
+  
+}
+
+                    @media screen and (max-width: 768px){
+   
+ 
+    #ariel_sprite{
+        margin-left: 10%;
+    }
+    #camus_sprite{
+        margin-left: 20%;
+    }
+    .main-nav.responsive{
+        position:fixed;
+        align-items:baseline;
+        flex-direction:column;
+        
+    }
+    .main-nav a{
+        display:none;
+    }
+    .main-nav .icon{
+        position:fixed;
+        display:block;
+        color:aliceblue;
+        left:0%;
+        width:20%;
+    }
+    .main-nav.responsive .icon{
+        position:fixed;
+        left:0%;
+        
+    }
+    .main-nav.responsive a {
+        display:block;
+        text-align: left; 
+        padding: 10px; 
+        width: 30%;
+        margin-left:20%;
+        background-color:rgb(187, 95, 187);
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    #logo{
+        width:60%;
+        margin-top:10%;
+        margin-left:20%;
+    }
+    #title{
+        width:100%;
+        color:aliceblue;
+        text-align: center;
+    }
+    #title p{
+        font-size: 18px;
+    }
+
+    #scene2 {
+        background: url('Images/outskirts_intro_10.png') -200px ;
+        width:100%;
+        height:850px;
+        overflow: hidden;
+    }
+    #scene3{
+        background: url('Images/outskirts.png') -200px;
+        width:100%;
+        height:600px;
+        overflow: hidden;
+    }
+    #scene4{
+        background: url('Images/3_bosses.gif') 60px no-repeat;
+        
+        width:100%;
+        height:450px;
+        overflow: hidden;
+    }
+    #scene5{
+        background: url('Images/prologue.png') -200px -80px ;
+        width:100%;
+        height:200px;
+       
+    }
+    #imageTwo, #imageThree, #imageFour, #imageFive{
+        display:none;
+    }
+    main{
+        height:3950px;
+    }
+    footer p{
+        font-size: 20px;
+    }
+    #tbox1 , #tbox2 , #tbox3 , #tbox4 , #tbox5 , #tbox6 , #tbox7{
+        height:130px;
+    }
+}
+
+                        @media screen and (max-width: 480px){
+    .main-nav.responsive a {
+
+        width: 40%;
+        
+    }
+    main{
+        height:41000px;
+    }
+    #title p{
+        font-size:15px;
+    }
+
+    #imageOne{
+        margin-top: 70%;
+    }
+
+    #ariel_sprite{
+        margin-left: 0%;
+    }
+    #camus_sprite{
+        margin-top:40%;
+        margin-left: 20%;
+    }
+    #scene2 {
+        background: url('Images/outskirts_intro_10.png') -350px ;
+        width:100%;
+        height:850px;
+        overflow: hidden;
+    }
+    #scene3{
+        background: url('Images/outskirts.png') -200px;
+        width:100%;
+        height:600px;
+        overflow: hidden;
+    }
+    #scene4{
+        background: url('Images/3_bosses.gif')-100px no-repeat;
+        
+        width:100vw;
+        height:450px;
+        overflow: hidden;
+    }
+    #scene5{
+        background: url('Images/prologue.png') -400px -70px no-repeat ;
+        width:100%;
+        height:790px;
+        overflow: hidden;
+    }
+   
+    #tbox1 , #tbox2 , #tbox3 , #tbox4 , #tbox5 , #tbox6 , #tbox7{
+        width: 30%;
+    }
+    main{
+        height:3800px;
+    }
+    footer{
+        height:300px;
+    }
+}
