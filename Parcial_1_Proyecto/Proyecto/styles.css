@@ -421,9 +421,9 @@ footer p:nth-child(1){
         overflow: hidden;
     }
     #scene4{
-        background: url('Images/3_bosses.gif')-60px no-repeat;
+        background: url('Images/3_bosses.gif')-100px no-repeat;
         
-        width:100%;
+        width:100vw;
         height:450px;
         overflow: hidden;
     }
