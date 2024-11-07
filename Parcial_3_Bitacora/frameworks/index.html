@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frameworks</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="bulb"><img src="bulb.png" height="400" width="700"> </div>
+        <pre>          HTML adaptativo.
+          Erick Daniel Galaviz Saenz
+         Mat.238545
+          Bitacora 3: Frameworks</pre>
+    </header>
+
+
+    <nav id="myMainNav" class="main-nav">
+
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/@supports">@supports</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/calc/">Calc</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/grids/">Grids</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/mobileFirst/">Mobile First</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/unidades_responsivas/">Unidades
+            responsivas</a>
+
+
+
+        <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        <!-- <button class="icon" class="burger"><i class="fa fa-bars"></i></button> -->
+    </nav>
+
+
+    <main>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/bootstrap.png" alt="">
+                </div>
+                <div class="texto">
+                    <h2>Bootstrap</h2>
+                    <p>
+                        <li>Bootstrap es uno de los frameworks más populares de CSS debido a su diseño responsivo. Fue
+                            desarrollado por Twitter y lanzando al público en el 2011. Dentro de su núcleo incluye HTML,
+                            SASS y JavaScript para dotarlo de funcionalidades y componentes bastante interesantes.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/foundation.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Foundation</h2>
+                    <p>
+                        <li>Este un framework pensando para cualquier dispositivo pensando en la accesibilidad.
+                            Foundation es en realidad una familia de frameworks que busca facilitar el diseño de sitios
+                            web, aplicaciones y correos electrónicos responsivos. Es semántico, legible, flexible y
+                            completamente personalizable.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/tailwind.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Tailwind CSS</h2>
+                    <p>
+                        <li>Tailwind CSS es una nueva forma de trabajar dentro de los frameworks de CSS. Funciona
+                            escaneando todos los archivos HTML, componentes de JavaScript y cualquier otra plantilla en
+                            busca de clases y de este modo genera los estilos correspondientes y escribe el resultado de
+                            esa búsqueda en un archivo CSS estático.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/bulma.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Bulma</h2>
+                    <p>
+                        <li>Bulma es un framework completamente gratuito y de código abierto con una librería de
+                            componentes listos para ser usados al construir interfaces responsivas.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/semantic.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Semantic UI</h2>
+                    <p>
+                        <li>Semantic UI tiene un concepto diferente al resto: construye un vocabulario compartido al
+                            rededor de la interfaz de usuario. Se basa en los principios del lenguaje natural y ofrece a
+                            quien desarrolle con este framework más flexibilidad al facilitar la lectura y comprensión
+                            del código.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>

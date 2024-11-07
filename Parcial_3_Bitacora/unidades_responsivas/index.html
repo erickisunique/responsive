@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unidades_responsivas</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="bulb"><img src="bulb.png" height="400" width="700"> </div>
+        <pre>           HTML adaptativo.
+        Erick Daniel Galaviz Saenz
+         Mat.238545
+    Bitacora 3: Unidades Responsivas</pre>
+    </header>
+
+
+    <nav id="myMainNav" class="main-nav">
+
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/@supports">@supports</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/calc/">Calc</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/frameworks/">Frameworks</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/grids/">Grids</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/unidades_mobileFirst/">MobileFirst</a>
+
+
+
+        <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        <!-- <button class="icon" class="burger"><i class="fa fa-bars"></i></button> -->
+    </nav>
+
+
+    <main>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/em.png" alt="">
+                </div>
+                <div class="texto">
+                    <h2>em</h2>
+                    <p>
+                        <li>em se corresponde con la medida actual de la fuente en un contenedor. Es decir, si hemos
+                            cambiado el tamaño de la fuente en un elemento y asignado font-size: 20px, entonces dentro
+                            de ese contenedor, 1em será igual a 20px.</li>
+                        <li></li>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/rem.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>rem</h2>
+                    <p>
+                        <li>rem es la unidad relativa al tamaño de la fuente, pero teniendo en cuenta el tamaño de la
+                            fuente
+                            del elemento HTML y no la heredada del elemento donde se encuentre ni la definida.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/porcentajes.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Porcentajes(%)</h2>
+                    <p>
+                        <li>Permite establecer tamaños en relación con el contenedor padre. Por ejemplo, width: 50%;
+                            hace que un elemento ocupe la mitad del ancho de su contenedor.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/vw.png" alt="" width="900" id="vw">
+                </div>
+                <div class="texto">
+                    <h2>vw</h2>
+                    <p>
+                        <li><strong>viewport width</strong> se basa en el ancho de la ventana gráfica, útil para crear
+                            diseños que se escalan con el
+                            ancho de la pantalla.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/vh.png" alt="" width="200" id="vh">
+                </div>
+                <div class="texto">
+                    <h2>vh</h2>
+                    <p>
+                        <li><strong>viewport height</strong> Similar a VW, pero basado en la altura de la ventana
+                            gráfica.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/vmin.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>vmin</h2>
+                    <p>
+                        <li>Por su parte, la unidad vmin permite devolvernos la cantidad más pequeña entre el valor de
+                            vw y de vh. De esta forma, si queremos el tamaño mínimo de estos dos, no tenemos que
+                            controlarlo, simplemente utilizamos la unidad vmin.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/vmax.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>vmax</h2>
+                    <p>
+                        <li>De la misma forma, la unidad vmax permite hacer lo mismo, pero con el valor máximo. En el
+                            mismo caso anterior, el valor máximo sería 800px, por lo que 50vmax sería 400px..</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/dvh.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>dvh, svh, lvh</h2>
+                    <p>
+                        <li><strong>dvh</strong> o dinamic viewport height es relativo al alto del navegador,</li>
+                        <li><strong>svh</strong> o small viewport height es igual a vh pero procura ser mas pequeño</li>
+                        <li><strong>lvh</strong> o large viewport height es igual a vh pero procura ser mas largo</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>

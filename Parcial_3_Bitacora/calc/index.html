@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="bulb"><img src="bulb.png" height="400" width="700"> </div>
+        <pre>          HTML adaptativo.
+          Erick Daniel Galaviz Saenz
+         Mat.238545
+          Bitacora 3: Calc</pre>
+    </header>
+
+
+    <nav id="myMainNav" class="main-nav">
+
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/@supports">@supports</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/frameworks/">Frameworks</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/grids/">Grids</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/mobileFirst/">Mobile First</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/unidades_responsivas/">Unidades
+            responsivas</a>
+
+
+
+        <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        <!-- <button class="icon" class="burger"><i class="fa fa-bars"></i></button> -->
+    </nav>
+
+
+    <main>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/calc.png" alt="">
+                </div>
+                <div class="texto">
+                    <h2>Calc</h2>
+                    <p>
+                        <li>La función CSS calc() puede ser usada en cualquier sitio donde length, frequency,
+                            angle, time, number, o integer sea requerido. Con calc() puedes realizar
+                            cálculos para determinar valores de propiedades CSS.</li>
+                       
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/expresions.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Expresiones</h2>
+                    <p>
+                        <li>La expresion puede ser una combinacion de los siguientes operadores:</li>
+                        <li>+ suma</li>
+                        <li>- resta</li>
+                        <li>* multiplicacion</li>
+                        <li>/ division</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+ 
+
+    </main>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>

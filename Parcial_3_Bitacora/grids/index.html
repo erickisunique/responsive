@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grids</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="bulb"><img src="bulb.png" height="400" width="700"> </div>
+        <pre>            HTML adaptativo.
+          Erick Daniel Galaviz Saenz
+         Mat.238545
+          Bitacora 3: Grids</pre>
+    </header>
+
+
+    <nav id="myMainNav" class="main-nav">
+
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/@supports">@supports</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/calc/">Calc</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/frameworks/">Frameworks</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/mobileFirst/">Mobile First</a>
+        <a href="https://erickisunique.github.io/responsive/Parcial_3_Bitacora/unidades_responsivas/">Unidades
+            responsivas</a>
+
+
+
+        <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        <!-- <button class="icon" class="burger"><i class="fa fa-bars"></i></button> -->
+    </nav>
+
+
+    <main>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/grids.png" alt="">
+                </div>
+                <div class="texto">
+                    <h2>Grids</h2>
+                    <p>
+                        <li>Grid CSS nace de la necesidad de colocar y distribuir los elementos a lo largo de una
+                            página, y recoge las ventajas de ese sistema, añadiendo numerosas mejoras y características
+                            que permiten crear rápidamente cuadrículas sencillas y potentes de forma prácticamente
+                            instantánea.</li>
+                     
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/filas.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Grid con filas y columnas</h2>
+                    <p>
+                        <li>Se puede establecer un tamaño fijo para la cuadrícula. Para ello podemos hacer uso de las
+                            propiedades CSS grid-template-columns y grid-template-rows, que sirven para indicar las
+                            dimensiones de cada celda de la cuadrícula, diferenciando entre columnas y filas.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-sec">
+            <div class="cuadro">
+                <div class="foto">
+                    <img src="images/fr.png" alt="" width="900">
+                </div>
+                <div class="texto">
+                    <h2>Unidad fraccion restante</h2>
+                    <p>
+                        <li>CSS Grid tiene una unidad especial llamada fr que simboliza una fracción de espacio restante
+                            en el grid. El uso de estas unidades puede reemplazar valores estáticos como los píxeles
+                            utilizados para definir nuestra grid anterior.</li>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>
